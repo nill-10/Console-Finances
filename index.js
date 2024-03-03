@@ -100,5 +100,13 @@ for (i=0 ; i<finances.length ; i++) {
   totalAmount += finances[i][1]
 }
 console.log(`Total: $${totalAmount}`);
- 
+
+// average of the **changes** 
+var totalChange = 0;
+var averageChange = 0;
+for (i=1 ; i < totalMonths; i++) {
+  totalChange += (finances[i][1] - finances[i-1][1]);
+}
+averageChange = (totalChange / (totalMonths - 1)).toFixed(2);
+console.log(`Average Change:$${averageChange}`);
 
