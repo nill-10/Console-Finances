@@ -10,4 +10,4 @@ this task is about creating code for analyzing the financial records of a compan
 2. JavaScript code analyzes the records to calculate operations.
 
 ## Qestions
-  [My Github :](https://github.com/nill-10)
+  [My Github profile](https://github.com/nill-10)
