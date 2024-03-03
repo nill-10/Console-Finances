@@ -110,3 +110,30 @@ for (i=1 ; i < totalMonths; i++) {
 averageChange = (totalChange / (totalMonths - 1)).toFixed(2);
 console.log(`Average Change:$${averageChange}`);
 
+// The greatest increase/decrease :
+
+var increase = []
+var decrease = [] 
+for (var i = totalMonths-1; i>0; i--){
+  increase.push((finances[i][1]) - (finances[i-1][1]));
+  
+}
+// console.log(increase);
+var max = increase[0];
+for (var i = 0 ; i < increase.length;i++){
+  if(increase[i] > max){
+    max = increase[i]
+    var index = i
+  }
+}
+
+console.log(`Greatest Increase in Profits/Losses: ${finances[increase.length-index][0]}(${max})`)
+
+var min = increase[0];
+for (var j = 0 ; j < increase.length;j++){
+  if( min > increase[j]){
+    min = increase[j];
+    var index=j;
+  }
+}
+console.log(`Greatest Decrease in Profits/Losses: ${finances[increase.length-index][0]}($${min})`)
